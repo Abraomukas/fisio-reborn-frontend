@@ -49,6 +49,10 @@ function Navbar(props) {
 							)}
 						</Translation>
 					</div>
+					{/* SECTIONS */}
+					<div className='collapse navbar-collapse'>
+						<ul className='navbar-nav'></ul>
+					</div>
 				</div>
 			</div>
 		</header>

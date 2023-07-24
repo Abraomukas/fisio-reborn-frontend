@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter, Routes } from 'react-router-dom';
+import LayoutRoute from './LayoutRoute';
 
 /**
  * COMPONENTS
@@ -12,7 +13,9 @@ import { BrowserRouter, Routes } from 'react-router-dom';
 function App() {
 	return (
 		<BrowserRouter>
-			<Routes></Routes>
+			<Routes>
+				<LayoutRoute path='/' component={Main} />
+			</Routes>
 		</BrowserRouter>
 	);
 }

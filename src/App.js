@@ -1,14 +1,15 @@
 import React from 'react';
-import { BrowserRouter, Routes } from 'react-router-dom';
-import LayoutRoute from './LayoutRoute';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 /**
  * COMPONENTS
  */
+import LayoutRoute from './LayoutRoute';
 
 /**
  * PAGES
  */
+import Main from './pages/Main';
 
 function App() {
 	return (

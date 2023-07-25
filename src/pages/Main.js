@@ -5,7 +5,13 @@ import { Translation } from 'react-i18next';
 function Main() {
 	return (
 		<div>
-			<section></section>
+			<section>
+				<div
+					className='d-flex justify-content-center'
+					style={{ marginTop: '7rem', marginBottom: '7rem' }}>
+					<Carousel />
+				</div>
+			</section>
 		</div>
 	);
 }

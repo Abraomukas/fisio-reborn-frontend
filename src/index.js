@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { Provider } from 'react-redux';
 
 import App from './App';
@@ -16,11 +16,13 @@ const spinnerFallback = (
 	</div>
 );
 
-ReactDOM.render(
-	<React.Suspense fallback={spinnerFallback}>
-		<Provider store={store}>
-			<App />
-		</Provider>
-	</React.Suspense>,
-	document.getElementById('root')
-);
+// ReactDOM.render(
+// 	<React.Suspense fallback={spinnerFallback}>
+// 		<Provider store={store}>
+// 			<App />
+// 		</Provider>
+// 	</React.Suspense>,
+// 	document.getElementById('root')
+// );
+
+ReactDOM.createRoot(document.getElementById('root')).render();

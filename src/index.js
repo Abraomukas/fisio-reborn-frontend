@@ -17,8 +17,17 @@ const spinnerFallback = (
 	</div>
 );
 
+/**
+ * PAGES
+ */
+import ErrorPage from './pages/Error';
+
 const router = createBrowserRouter([
-	{ path: '/', element: <div>Hello FisioReborn!</div> },
+	{
+		path: '/',
+		element: <div>Hello FisioReborn!</div>,
+		errorElement: <ErrorPage />,
+	},
 ]);
 
 // ReactDOM.render(

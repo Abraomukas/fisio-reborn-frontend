@@ -8,9 +8,7 @@ function Main() {
 			<section>
 				<div
 					className='d-flex justify-content-center'
-					style={{ marginTop: '7rem', marginBottom: '7rem' }}>
-					<Carousel />
-				</div>
+					style={{ marginTop: '7rem', marginBottom: '7rem' }}></div>
 			</section>
 		</div>
 	);

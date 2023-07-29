@@ -28,6 +28,33 @@ const router = createBrowserRouter([
 		element: <div>Hello FisioReborn!</div>,
 		errorElement: <ErrorPage />,
 	},
+	{
+		path: '/about',
+		element: (
+			<div>
+				<h3>About me</h3>
+			</div>
+		),
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/services',
+		element: (
+			<div>
+				<h3>Services</h3>
+			</div>
+		),
+		errorElement: <ErrorPage />,
+	},
+	{
+		path: '/contact',
+		element: (
+			<div>
+				<h3>Contact me</h3>
+			</div>
+		),
+		errorElement: <ErrorPage />,
+	},
 ]);
 
 // ReactDOM.render(

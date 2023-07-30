@@ -21,11 +21,12 @@ const spinnerFallback = (
  * PAGES
  */
 import ErrorPage from './pages/Error';
+import Main from './pages/Main';
 
 const router = createBrowserRouter([
 	{
 		path: '/',
-		element: <div>Hello FisioReborn!</div>,
+		element: <Main />,
 		errorElement: <ErrorPage />,
 	},
 	{
@@ -56,15 +57,6 @@ const router = createBrowserRouter([
 		errorElement: <ErrorPage />,
 	},
 ]);
-
-// ReactDOM.render(
-// 	<React.Suspense fallback={spinnerFallback}>
-// 		<Provider store={store}>
-// 			<App />
-// 		</Provider>
-// 	</React.Suspense>,
-// 	document.getElementById('root')
-// );
 
 ReactDOM.createRoot(document.getElementById('root')).render(
 	<React.Suspense fallback={spinnerFallback}>

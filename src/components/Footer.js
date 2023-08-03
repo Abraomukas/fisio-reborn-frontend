@@ -11,35 +11,63 @@ const navbarStyle = {
 
 function Footer() {
 	return (
-		<footer className='text-center text-white' style={navbarStyle}>
+		<footer className='bg-dark text-center text-white'>
+			{/* GRID CONTAINER */}
 			<div className='container p-4'>
-				<section>
-					<Translation>
-						{(t) => (
-							<small>
-								{t('footer.disclaimer_one')}
-								<Link
-									className='text-white text-decoration-none'
-									to='www.toastmasters.org'>
-									FisioReborn
-								</Link>
-								. {t('footer.disclaimer_two')}
-							</small>
-						)}
-					</Translation>
+				{/* SOCIAL MEDIA */}
+				<section className='mb-4'>
+					{/* FACEBOOK */}
+					<a
+						className='btn btn-primary btn-floating m-1'
+						style={{ backgroundColor: '#3b5998' }}
+						href='#!'
+						role='button'>
+						<i className='fab fa-facebook-f'></i>
+					</a>
+					{/*INSTAGRAM */}{' '}
+					<a
+						className='btn btn-primary btn-floating m-1'
+						style={{ backgroundColor: '#ac2bac' }}
+						href='https://www.instagram.com/fisioreborn/'
+						role='button'>
+						<i className='fab fa-instagram'></i>
+					</a>
 				</section>
-			</div>
-
-			<div
-				className='text-center p-3'
-				style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-				<Translation>
-					{(t) => (
-						<small>
-							<strong>FisioReborn</strong> - {t('footer.note')} Abraomukas
-						</small>
-					)}
-				</Translation>
+				{/* FORM */}
+				<section className=''>
+					<form action=''>
+						{/* GRID ROW */}
+						<div className='row d-flex justify-content-center'>
+							{/* GRID COLUMN */}
+							<div className='col-auto'>
+								<p className='pt-2'>
+									<strong>Sign up for our newsletter</strong>
+								</p>
+							</div>
+							{/* GRID COLUMN */}
+							<div className='col-md-5 col-12'>
+								{/* EMAIL INPUT */}
+								<div className='form-outline form-white mb-4'>
+									<input
+										type='email'
+										id='form5Example2'
+										className='form-control'
+									/>
+									<label className='form-label' for='form5Example2'>
+										Email address
+									</label>
+								</div>
+							</div>
+							{/* GRID COLUMN */}
+							<div className='col-auto'>
+								{/* SUBMIT BUTTON */}
+								<button type='submit' className='btn btn-primary mb-4'>
+									Submit
+								</button>
+							</div>
+						</div>
+					</form>
+				</section>
 			</div>
 		</footer>
 	);

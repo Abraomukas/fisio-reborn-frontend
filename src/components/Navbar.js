@@ -9,14 +9,6 @@ import i18next from 'i18next';
  */
 import DropdownList from './DropdownList';
 
-const bgColor = { backgroundColor: '#696969' };
-const btnStyle = {
-	borderColor: '#8d323f',
-	borderWidth: 'medium',
-	borderStyle: 'solid',
-};
-
-const logoPath = './images/logo.png';
 const languages = [
 	{ name: 'English', country_code: 'gb' },
 	{ name: 'Español', country_code: 'es' },
@@ -78,13 +70,43 @@ function Navbar(props) {
 
 					{/* RIGHT ELEMENTS */}
 					<div className='d-flex align-items-center'>
-						{/* ICON */}
-						<a className='text-reset me-3' href='#'>
-							<i className='fas fa-shopping-cart'></i>
-						</a>
-
 						{/* LANGUAGES */}
-						<div className='dropdown'></div>
+						<div className='dropdown mx-3'>
+							<a
+								className='text-reset me-3 dropdown-toggle hidden-arrow'
+								href='#'
+								id='navbarDropdownMenuLink'
+								role='button'
+								data-mdb-toggle='dropdown'
+								aria-expanded='false'>
+								<i className='fas fa-globe' style={{ color: '#ffffff' }}></i>
+							</a>
+							<ul
+								className='dropdown-menu dropdown-menu-end'
+								aria-labelledby='navbarDropdownMenuLink'>
+								{languages.map(({ name, country_code, index }) => {
+									return (
+										<li key={index}>
+											<button
+												className='dropdown-item'
+												onClick={() => {
+													i18next.changeLanguage(country_code);
+													window.location.reload();
+												}}
+												disabled={country_code === currentLngCode}>
+												<span
+													className={`fi fi-${country_code} fis mx-3`}
+													style={{
+														opacity: country_code === currentLngCode ? 0.5 : 1,
+													}}></span>
+
+												{name}
+											</button>
+										</li>
+									);
+								})}
+							</ul>
+						</div>
 						{/* AVATAR */}
 						<div className='dropdown'>
 							<a

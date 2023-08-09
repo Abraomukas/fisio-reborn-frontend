@@ -11,7 +11,7 @@ function Main() {
 			{/* HERO */}
 			<section>
 				<div
-					className='d-flex justify-content-center'
+					className='d-flex justify-content-center min-vh-100'
 					style={{ marginTop: '7rem', marginBottom: '7rem' }}>
 					<div>Hello FisioReborn!</div>
 				</div>

@@ -8,6 +8,7 @@ function Main() {
 	return (
 		<div>
 			<Navbar />
+			{/* HERO */}
 			<section>
 				<div
 					className='d-flex justify-content-center'
@@ -15,6 +16,20 @@ function Main() {
 					<div>Hello FisioReborn!</div>
 				</div>
 			</section>
+			{/* INTRO */}
+			<section></section>
+			{/* BENEFITS */}
+			<section></section>
+			{/* CTA */}
+			<section></section>
+			{/* ABOUT ME */}
+			<section></section>
+			{/* TARGET */}
+			<section></section>
+			{/* TESTIMONIALS */}
+			<section></section>
+			{/* CTA */}
+			<section></section>
 			<Footer />
 		</div>
 	);

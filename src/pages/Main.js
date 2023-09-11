@@ -18,17 +18,13 @@ function Main() {
 			</section>
 			{/* INTRO */}
 			<section></section>
-			{/* BENEFITS */}
-			<section></section>
-			{/* CTA */}
+			{/* CHALLENGES */}
 			<section></section>
 			{/* ABOUT ME */}
 			<section></section>
 			{/* TARGET */}
 			<section></section>
 			{/* TESTIMONIALS */}
-			<section></section>
-			{/* CTA */}
 			<section></section>
 			<Footer />
 		</div>

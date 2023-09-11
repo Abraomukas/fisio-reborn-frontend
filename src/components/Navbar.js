@@ -69,82 +69,85 @@ function Navbar(props) {
 					{/* COLLAPSIBLE WRAPPER */}
 
 					{/* RIGHT ELEMENTS */}
-					<div className='d-flex align-items-center'>
-						{/* LANGUAGES */}
-						<div className='dropdown mx-3'>
-							<a
-								className='text-reset me-3 dropdown-toggle hidden-arrow'
-								href='#'
-								id='navbarDropdownMenuLink'
-								role='button'
-								data-mdb-toggle='dropdown'
-								aria-expanded='false'>
-								<i className='fas fa-globe' style={{ color: '#ffffff' }}></i>
-							</a>
-							<ul
-								className='dropdown-menu dropdown-menu-end'
-								aria-labelledby='navbarDropdownMenuLink'>
-								{languages.map(({ name, country_code, index }) => {
-									return (
-										<li key={index}>
-											<button
-												className='dropdown-item'
-												onClick={() => {
-													i18next.changeLanguage(country_code);
-													window.location.reload();
-												}}
-												disabled={country_code === currentLngCode}>
-												<span
-													className={`fi fi-${country_code} fis mx-3`}
-													style={{
-														opacity: country_code === currentLngCode ? 0.5 : 1,
-													}}></span>
+					{isLoggedIn && (
+						<div className='d-flex align-items-center'>
+							{/* LANGUAGES */}
+							<div className='dropdown mx-3'>
+								<a
+									className='text-reset me-3 dropdown-toggle hidden-arrow'
+									href='#'
+									id='navbarDropdownMenuLink'
+									role='button'
+									data-mdb-toggle='dropdown'
+									aria-expanded='false'>
+									<i className='fas fa-globe' style={{ color: '#ffffff' }}></i>
+								</a>
+								<ul
+									className='dropdown-menu dropdown-menu-end'
+									aria-labelledby='navbarDropdownMenuLink'>
+									{languages.map(({ name, country_code, index }) => {
+										return (
+											<li key={index}>
+												<button
+													className='dropdown-item'
+													onClick={() => {
+														i18next.changeLanguage(country_code);
+														window.location.reload();
+													}}
+													disabled={country_code === currentLngCode}>
+													<span
+														className={`fi fi-${country_code} fis mx-3`}
+														style={{
+															opacity:
+																country_code === currentLngCode ? 0.5 : 1,
+														}}></span>
 
-												{name}
-											</button>
-										</li>
-									);
-								})}
-							</ul>
+													{name}
+												</button>
+											</li>
+										);
+									})}
+								</ul>
+							</div>
+							{/* AVATAR */}
+							<div className='dropdown'>
+								<a
+									className='dropdown-toggle d-flex align-items-center hidden-arrow'
+									href='#'
+									id='navbarDropdownMenuAvatar'
+									role='button'
+									data-mdb-toggle='dropdown'
+									aria-expanded='false'>
+									<img
+										src='https://mdbcdn.b-cdn.net/img/new/avatars/2.webp'
+										className='rounded-circle'
+										height='25'
+										alt='Black and White Portrait of a Man'
+										loading='lazy'
+									/>
+								</a>
+								<ul
+									className='dropdown-menu dropdown-menu-end'
+									aria-labelledby='navbarDropdownMenuAvatar'>
+									<li>
+										<a className='dropdown-item' href='#'>
+											My profile
+										</a>
+									</li>
+									<li>
+										<a className='dropdown-item' href='#'>
+											Settings
+										</a>
+									</li>
+									<li>
+										<a className='dropdown-item' href='#'>
+											Logout
+										</a>
+									</li>
+								</ul>
+							</div>
 						</div>
-						{/* AVATAR */}
-						<div className='dropdown'>
-							<a
-								className='dropdown-toggle d-flex align-items-center hidden-arrow'
-								href='#'
-								id='navbarDropdownMenuAvatar'
-								role='button'
-								data-mdb-toggle='dropdown'
-								aria-expanded='false'>
-								<img
-									src='https://mdbcdn.b-cdn.net/img/new/avatars/2.webp'
-									className='rounded-circle'
-									height='25'
-									alt='Black and White Portrait of a Man'
-									loading='lazy'
-								/>
-							</a>
-							<ul
-								className='dropdown-menu dropdown-menu-end'
-								aria-labelledby='navbarDropdownMenuAvatar'>
-								<li>
-									<a className='dropdown-item' href='#'>
-										My profile
-									</a>
-								</li>
-								<li>
-									<a className='dropdown-item' href='#'>
-										Settings
-									</a>
-								</li>
-								<li>
-									<a className='dropdown-item' href='#'>
-										Logout
-									</a>
-								</li>
-							</ul>
-						</div>
-					</div>
+					)}
 					{/* RIGHT ELEMENTS */}
 				</div>
 				{/* CONTAINER WRAPPER */}

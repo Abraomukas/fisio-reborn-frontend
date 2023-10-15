@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Translation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import AboutMe from './AboutMe';
 
 function Main() {
 	return (
@@ -21,7 +22,9 @@ function Main() {
 			{/* CHALLENGES */}
 			<section></section>
 			{/* ABOUT ME */}
-			<section></section>
+			<section>
+				<AboutMe />
+			</section>
 			{/* TARGET */}
 			<section></section>
 			{/* TESTIMONIALS */}

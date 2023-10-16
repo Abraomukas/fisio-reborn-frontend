@@ -10,6 +10,10 @@ function AboutMe() {
 				<h4>
 					<strong>¿Quién soy?</strong>
 				</h4>
+
+				<p>
+					<strong>Mi nombre es Javier Varo</strong>
+				</p>
 			</div>
 		</div>
 	);

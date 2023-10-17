@@ -4,6 +4,7 @@ import { Translation } from 'react-i18next';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import AboutMe from './AboutMe';
+import Testimonials from './Testimonials';
 
 function Main() {
 	return (
@@ -28,7 +29,9 @@ function Main() {
 			{/* TARGET */}
 			<section></section>
 			{/* TESTIMONIALS */}
-			<section></section>
+			<section>
+				<Testimonials />
+			</section>
 			<Footer />
 		</div>
 	);

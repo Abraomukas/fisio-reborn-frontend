@@ -5,6 +5,7 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import AboutMe from './AboutMe';
 import Testimonials from './Testimonials';
+import Target from './Target';
 
 function Main() {
 	return (
@@ -27,7 +28,9 @@ function Main() {
 				<AboutMe />
 			</section>
 			{/* TARGET */}
-			<section></section>
+			<section>
+				<Target />
+			</section>
 			{/* TESTIMONIALS */}
 			<section>
 				<Testimonials />

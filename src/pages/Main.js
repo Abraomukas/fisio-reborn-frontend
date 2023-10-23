@@ -15,7 +15,7 @@ function Main() {
 			<section>
 				<div
 					className='d-flex justify-content-center min-vh-100'
-					style={{ marginTop: '7rem', marginBottom: '7rem' }}>
+					style={{ marginTop: '3rem', marginBottom: '3rem' }}>
 					<div>Hello FisioReborn!</div>
 				</div>
 			</section>
@@ -28,13 +28,9 @@ function Main() {
 				<AboutMe />
 			</section>
 			{/* TARGET */}
-			<section>
-				<Target />
-			</section>
+			<section>{/* <Target /> */}</section>
 			{/* TESTIMONIALS */}
-			<section>
-				<Testimonials />
-			</section>
+			<section>{/* <Testimonials /> */}</section>
 			<Footer />
 		</div>
 	);

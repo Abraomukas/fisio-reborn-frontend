@@ -24,11 +24,11 @@ function Main() {
 			{/* CHALLENGES */}
 			<section></section>
 			{/* ABOUT ME */}
-			<section>
-				<AboutMe />
-			</section>
+			<section>{/* <AboutMe /> */}</section>
 			{/* TARGET */}
-			<section>{/* <Target /> */}</section>
+			<section>
+				<Target />
+			</section>
 			{/* TESTIMONIALS */}
 			<section>{/* <Testimonials /> */}</section>
 			<Footer />

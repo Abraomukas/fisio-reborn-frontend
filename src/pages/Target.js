@@ -10,7 +10,7 @@ function Target() {
 					<strong>Target</strong>
 				</h5>
 			</div>
-			<div className='row gx-1'>
+			<div className='row gx-1 justify-content-center'>
 				<div className='col-lg-4 col-md-12'>
 					<div className='card'>
 						<div
@@ -101,9 +101,7 @@ function Target() {
 						</div>
 					</div>
 				</div>
-			</div>
-			<div className='row gx-1'>
-				<div className='col-lg-4 col-md-12'>
+				<div className='col-lg-4 col-md-6'>
 					<div className='card'>
 						<div
 							className='bg-image hover-overlay ripple'
@@ -133,7 +131,7 @@ function Target() {
 						</div>
 					</div>
 				</div>
-				<div className='col-lg-4 col-md-12'>
+				<div className='col-lg-4 col-md-6'>
 					<div className='card'>
 						<div
 							className='bg-image hover-overlay ripple'

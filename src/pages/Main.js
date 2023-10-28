@@ -12,10 +12,8 @@ function Main() {
 		<div>
 			<Navbar />
 			{/* HERO */}
-			<section>
-				<div
-					className='d-flex justify-content-center min-vh-100'
-					style={{ marginTop: '3rem', marginBottom: '3rem' }}>
+			<section style={{ height: '100vh' }}>
+				<div className='d-flex justify-content-center'>
 					<div>Hello FisioReborn!</div>
 				</div>
 			</section>
@@ -24,13 +22,17 @@ function Main() {
 			{/* CHALLENGES */}
 			<section></section>
 			{/* ABOUT ME */}
-			<section>{/* <AboutMe /> */}</section>
+			<section style={{ height: '100vh' }}>
+				<AboutMe />
+			</section>
 			{/* TARGET */}
-			<section>
+			<section style={{ height: '100vh' }}>
 				<Target />
 			</section>
 			{/* TESTIMONIALS */}
-			<section>{/* <Testimonials /> */}</section>
+			<section style={{ height: '100vh' }}>
+				<Testimonials />
+			</section>
 			<Footer />
 		</div>
 	);

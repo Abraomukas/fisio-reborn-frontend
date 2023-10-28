@@ -6,6 +6,7 @@ import Footer from '../components/Footer';
 import AboutMe from './AboutMe';
 import Testimonials from './Testimonials';
 import Target from './Target';
+import Hero from './Hero';
 
 function Main() {
 	return (
@@ -13,9 +14,7 @@ function Main() {
 			<Navbar />
 			{/* HERO */}
 			<section style={{ height: '100vh' }}>
-				<div className='d-flex justify-content-center'>
-					<div>Hello FisioReborn!</div>
-				</div>
+				<Hero />
 			</section>
 			{/* INTRO */}
 			<section></section>

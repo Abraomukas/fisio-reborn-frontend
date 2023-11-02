@@ -53,7 +53,7 @@ function Footer() {
 										id='form5Example2'
 										className='form-control'
 									/>
-									<label className='form-label' for='form5Example2'>
+									<label className='form-label' htmlFor='form5Example2'>
 										Email address
 									</label>
 								</div>

@@ -21,13 +21,9 @@ function Main() {
 			{/* CHALLENGES */}
 			<section></section>
 			{/* ABOUT ME */}
-			<section style={{ height: '100vh' }}>
-				<AboutMe />
-			</section>
+			<section style={{ height: '100vh' }}>{/* <AboutMe /> */}</section>
 			{/* TARGET */}
-			<section style={{ height: '100vh' }}>
-				<Target />
-			</section>
+			<section style={{ height: '100vh' }}>{/* <Target /> */}</section>
 			{/* TESTIMONIALS */}
 			<section style={{ height: '100vh' }}>
 				<Testimonials />

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Translation } from 'react-i18next';
 import Navbar from '../components/Navbar';
@@ -9,6 +9,23 @@ import Target from './Target';
 import Hero from './Hero';
 
 function Main() {
+	const [activeDiv, setActiveDiv] = useState('hero');
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+
+	const handleScroll = () => {
+		const scrollPosition = window.scrollY;
+	};
+
+	const divAStyles = scrolling ? {} : { height: '100vh' };
+	const divBStyles = scrolling ? { height: '100vh' } : {};
+
 	return (
 		<div>
 			<Navbar />

@@ -21,6 +21,20 @@ function Main() {
 
 	const handleScroll = () => {
 		const scrollPosition = window.scrollY;
+
+		if (scrollPosition < window.innerHeight) {
+			setActiveDiv('hero');
+		} else if (scrollPosition < 2 * window.innerHeight) {
+			setActiveDiv('intro');
+		} else if (scrollPosition < 3 * window.innerHeight) {
+			setActiveDiv('challenges');
+		} else if (scrollPosition < 4 * window.innerHeight) {
+			setActiveDiv('about-me');
+		} else if (scrollPosition < 5 * window.innerHeight) {
+			setActiveDiv('target');
+		} else if (scrollPosition < 6 * window.innerHeight) {
+			setActiveDiv('testimonials');
+		}
 	};
 
 	const divAStyles = scrolling ? {} : { height: '100vh' };

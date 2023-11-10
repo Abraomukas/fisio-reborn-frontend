@@ -32,35 +32,41 @@ function Main() {
 			setActiveDiv('about-me');
 		} else if (scrollPosition < 5 * window.innerHeight) {
 			setActiveDiv('target');
-		} else if (scrollPosition < 6 * window.innerHeight) {
+		} else {
 			setActiveDiv('testimonials');
 		}
 	};
 
-	const divAStyles = scrolling ? {} : { height: '100vh' };
-	const divBStyles = scrolling ? { height: '100vh' } : {};
+	const divHeroStyles = activeDiv === '' ? { height: '100vh' } : {};
+	const divIntroStyles = activeDiv === '' ? { height: '100vh' } : {};
+	const divChallengesStyles = activeDiv === '' ? { height: '100vh' } : {};
+	const divAboutMeStyles = activeDiv === '' ? { height: '100vh' } : {};
+	const divTargetStyles = activeDiv === '' ? { height: '100vh' } : {};
+	const divTestimonialsStyles = activeDiv === '' ? { height: '100vh' } : {};
 
 	return (
 		<div>
 			<Navbar />
 			{/* HERO */}
-			<section style={{ height: '100vh' }}>
+			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
 				<Hero />
 			</section>
 			{/* INTRO */}
-			<section></section>
+			<section
+				style={{ height: '100vh', transition: 'height 0.5s ease' }}></section>
 			{/* CHALLENGES */}
-			<section></section>
+			<section
+				style={{ height: '100vh', transition: 'height 0.5s ease' }}></section>
 			{/* ABOUT ME */}
-			<section style={{ height: '100vh' }}>
+			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
 				<AboutMe />
 			</section>
 			{/* TARGET */}
-			<section style={{ height: '100vh' }}>
+			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
 				<Target />
 			</section>
 			{/* TESTIMONIALS */}
-			<section style={{ height: '100vh' }}>
+			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
 				<Testimonials />
 			</section>
 			<Footer />

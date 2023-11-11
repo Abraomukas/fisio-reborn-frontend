@@ -57,7 +57,26 @@ function Navbar(props) {
 					</a>
 				</div>
 			</div>
-			<div className='navbar-right'></div>
+			<div className='navbar-right'>
+				{/* DARK MODE */}
+				<div className='dropdown'>
+					<a
+						className='text-reset me-3'
+						href='#'
+						role='button'
+						aria-expanded='false'
+						onClick={() => {
+							Cookies.set('darkMode', !isDarkMode);
+							setIsDarkMode(!isDarkMode);
+						}}>
+						{isDarkMode ? (
+							<i className='fas fa-sun' style={{ color: '#ffffff' }} />
+						) : (
+							<i className='fas fa-moon' style={{ color: '#000000' }} />
+						)}
+					</a>
+				</div>
+			</div>
 		</nav>
 	);
 }

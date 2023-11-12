@@ -4,19 +4,21 @@ import { Translation } from 'react-i18next';
 
 //* COMPONENTS
 import Navbar from '../components/Navbar';
+import Temp from '../components/Temp';
 import Footer from '../components/Footer';
 
 //* PAGES
 import Hero from './Hero';
 import Challenges from './Challenges';
 import AboutMe from './AboutMe';
-import Testimonials from './Testimonials';
 import Target from './Target';
+import Harbiz from './Harbiz';
+import Testimonials from './Testimonials';
 
 function Main() {
-  const [activeDiv, setActiveDiv] = useState(0);
+	const [activeDiv, setActiveDiv] = useState(0);
 
-  useEffect(() => {
+	useEffect(() => {
 		const handleScroll = () => {
 			const newActiveDiv = Math.floor(window.scrollY / window.innerHeight);
 			setActiveDiv(newActiveDiv);
@@ -29,7 +31,7 @@ function Main() {
 		};
 	}, []);
 
-	const sections = [Hero, Challenges, AboutMe, Target, Testimonials];
+	const sections = [Hero, Challenges, AboutMe, Target, Harbiz, Testimonials];
 
 	const divStyles = {
 		height: '100vh',
@@ -40,8 +42,8 @@ function Main() {
 
 	return (
 		<div style={{ position: 'relative', minHeight: '100vh' }}>
-			<Navbar />
-
+			{/* <Navbar /> */}
+			<Temp />
 			{/* SECTIONS */}
 			{sections.map((SectionComponent, index) => (
 				<section key={index}>

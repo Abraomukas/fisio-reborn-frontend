@@ -1,17 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Translation } from 'react-i18next';
+
+//* COMPONENTS
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+
+
+//*PAGES
+import Hero from './Hero';
+import Challenges from './Challenges';
 import AboutMe from './AboutMe';
 import Testimonials from './Testimonials';
 import Target from './Target';
-import Hero from './Hero';
 
 function Main() {
-	const [activeDiv, setActiveDiv] = useState('hero');
+	const [activeDiv, setActiveDiv] = useState(0);
 
 	useEffect(() => {
+		const handleScroll = () => {
+			const newActiveDiv = Math.floor(window.scrollY / window.innerHeight);
+			setActiveDiv(newActiveDiv);
+		};
+
 		window.addEventListener('scroll', handleScroll);
 
 		return () => {
@@ -19,57 +30,34 @@ function Main() {
 		};
 	}, []);
 
-	const handleScroll = () => {
-		const scrollPosition = window.scrollY;
+	const sections = [Hero, Challenges, AboutMe, Testimonials, Target];
 
-		if (scrollPosition < window.innerHeight) {
-			setActiveDiv('hero');
-		} else if (scrollPosition < 2 * window.innerHeight) {
-			setActiveDiv('intro');
-		} else if (scrollPosition < 3 * window.innerHeight) {
-			setActiveDiv('challenges');
-		} else if (scrollPosition < 4 * window.innerHeight) {
-			setActiveDiv('about-me');
-		} else if (scrollPosition < 5 * window.innerHeight) {
-			setActiveDiv('target');
-		} else {
-			setActiveDiv('testimonials');
-		}
+	const divStyles = {
+		height: '100vh',
+		transition: 'height 0.5 ease',
+		visibility: 'hidden',
+		opacity: 0,
 	};
-
-	const divHeroStyles = activeDiv === '' ? { height: '100vh' } : {};
-	const divIntroStyles = activeDiv === '' ? { height: '100vh' } : {};
-	const divChallengesStyles = activeDiv === '' ? { height: '100vh' } : {};
-	const divAboutMeStyles = activeDiv === '' ? { height: '100vh' } : {};
-	const divTargetStyles = activeDiv === '' ? { height: '100vh' } : {};
-	const divTestimonialsStyles = activeDiv === '' ? { height: '100vh' } : {};
-
 	return (
 		<div>
-			<Navbar />
-			{/* HERO */}
-			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
-				<Hero />
-			</section>
-			{/* INTRO */}
-			<section
-				style={{ height: '100vh', transition: 'height 0.5s ease' }}></section>
-			{/* CHALLENGES */}
-			<section
-				style={{ height: '100vh', transition: 'height 0.5s ease' }}></section>
-			{/* ABOUT ME */}
-			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
-				<AboutMe />
-			</section>
-			{/* TARGET */}
-			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
-				<Target />
-			</section>
-			{/* TESTIMONIALS */}
-			<section style={{ height: '100vh', transition: 'height 0.5s ease' }}>
-				<Testimonials />
-			</section>
-			<Footer />
+			{/* <Navbar /> */}
+
+			{/* SECTIONS */}
+			{sections.map((divComponent, index) => {
+				<section key={index}>
+					<div
+						style={{
+							...divStyles,
+							height: activeDiv === index ? '100vh' : '0',
+							visibility: activeDiv === index ? 'visible' : 'hidden',
+							opacity: activeDiv === index ? 1 : 0,
+						}}>
+						<divComponent />
+					</div>
+				</section>;
+			})}
+
+			{/* <Footer /> */}
 		</div>
 	);
 }

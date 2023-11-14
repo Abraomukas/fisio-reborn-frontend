@@ -4,7 +4,14 @@ import { Translation } from 'react-i18next';
 
 function AboutMe() {
 	return (
-		<div className='container-fluid'>
+		<div
+			className='container-fluid'
+			style={{
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				height: '100vh',
+			}}>
 			<div className='row gx-1'>
 				<div className='col-lg-2 col-md-1'></div>
 				<div className='col-lg-4 col-md-5'>

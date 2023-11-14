@@ -4,7 +4,14 @@ import { Translation } from 'react-i18next';
 
 function Testimonials() {
 	return (
-		<div className='container'>
+		<div
+			className='container'
+			style={{
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				height: '100vh',
+			}}>
 			<div
 				id='carouselExampleCrossfade'
 				className='carousel slide carousel-fade'

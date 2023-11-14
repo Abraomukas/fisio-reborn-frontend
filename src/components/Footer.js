@@ -3,15 +3,16 @@ import { Link } from 'react-router-dom';
 import { Translation } from 'react-i18next';
 
 const navbarStyle = {
-	backgroundColor: '#235679',
+	backgroundColor: '#303030',
 	bottom: 0,
-	marginTop: '3rem',
 	width: '100%',
+	color: 'white',
+	position: 'absolute',
 };
 
 function Footer() {
 	return (
-		<footer className='bg-dark text-center text-white'>
+		<footer style={navbarStyle}>
 			{/* GRID CONTAINER */}
 			<div className='container p-4'>
 				{/* SOCIAL MEDIA */}

@@ -12,7 +12,7 @@ const navbarStyle = {
 
 function Footer() {
 	return (
-		<footer style={navbarStyle}>
+		<footer className='text-center' style={navbarStyle}>
 			{/* GRID CONTAINER */}
 			<div className='container p-4'>
 				{/* SOCIAL MEDIA */}
@@ -48,7 +48,7 @@ function Footer() {
 							{/* GRID COLUMN */}
 							<div className='col-md-5 col-12'>
 								{/* EMAIL INPUT */}
-								<div className='form-outline form-white mb-4'>
+								<div className='form-outline border form-white mb-4'>
 									<input
 										type='email'
 										id='form5Example2'

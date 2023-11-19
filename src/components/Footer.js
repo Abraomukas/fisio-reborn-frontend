@@ -23,15 +23,23 @@ function Footer() {
 						style={{ backgroundColor: '#3b5998' }}
 						href='https://www.facebook.com/fisioreborn'
 						role='button'>
-						<i className='fab fa-facebook-f'></i>
+						<i className='fab fa-facebook-f fa-lg'></i>
 					</a>
-					{/*INSTAGRAM */}{' '}
+					{/* INSTAGRAM */}
 					<a
 						className='btn btn-primary btn-floating m-1'
 						style={{ backgroundColor: '#ac2bac' }}
 						href='https://www.instagram.com/fisioreborn/'
 						role='button'>
-						<i className='fab fa-instagram'></i>
+						<i className='fab fa-instagram fa-lg'></i>
+					</a>
+					{/* BUY ME A COFFEE */}
+					<a
+						className='btn btn-primary btn-floating m-1'
+						style={{ backgroundColor: 'goldenrod' }}
+						href='#'
+						role='button'>
+						<i className='fab fa-mug-saucer fa-lg'></i>
 					</a>
 				</section>
 				{/* FORM */}

@@ -5,7 +5,7 @@ import { Translation } from 'react-i18next';
 function Testimonials() {
 	return (
 		<div
-			className='container'
+			className='container-fluid'
 			style={{
 				display: 'flex',
 				justifyContent: 'center',

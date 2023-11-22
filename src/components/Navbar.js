@@ -106,6 +106,10 @@ function Navbar(props) {
 							})}
 						</ul>
 					</div>
+					<button type='button' className='btn btn-warning'>
+						Login
+					</button>
+
 					{isLoggedIn && (
 						<div className='d-flex align-items-center'>
 							{/* AVATAR */}

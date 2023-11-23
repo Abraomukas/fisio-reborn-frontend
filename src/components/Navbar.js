@@ -15,7 +15,13 @@ const languages = [
 ];
 
 function Navbar(props) {
-	const isLoggedIn = Cookies.get('isLogged') || false;
+	const loggedInCookie = Cookies.get('isLoggedIn') || false;
+	const [isLoggedIn, setIsLoggedIn] = useState(loggedInCookie);
+
+	const handleLoginStatus = () => {
+		setIsLoggedIn(!isLoggedIn);
+	};
+
 	const currentLngCode = Cookies.get('i18next') || 'es';
 
 	return (
@@ -106,53 +112,34 @@ function Navbar(props) {
 							})}
 						</ul>
 					</div>
-					<button type='button' className='btn btn-warning'>
-						Login
-					</button>
 
-					{isLoggedIn && (
-						<div className='d-flex align-items-center'>
-							{/* AVATAR */}
-							<div className='dropdown'>
-								<a
-									className='dropdown-toggle d-flex align-items-center hidden-arrow'
-									href='#'
-									id='navbarDropdownMenuAvatar'
-									role='button'
-									data-mdb-toggle='dropdown'
-									aria-expanded='false'>
-									<img
-										src='https://mdbcdn.b-cdn.net/img/new/avatars/2.webp'
-										className='rounded-circle'
-										height='25'
-										alt='Black and White Portrait of a Man'
-										loading='lazy'
-									/>
-								</a>
-								<ul
-									className='dropdown-menu dropdown-menu-end'
-									aria-labelledby='navbarDropdownMenuAvatar'>
-									<li>
-										<a className='dropdown-item' href='#'>
-											My profile
-										</a>
-									</li>
-									<li>
-										<a className='dropdown-item' href='#'>
-											Settings
-										</a>
-									</li>
-									<li>
-										<a className='dropdown-item' href='#'>
-											Logout
-										</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					)}
-					{/* RIGHT ELEMENTS */}
+					<button
+						type='button'
+						className={isLoggedIn ? 'btn btn-danger' : 'btn btn-warning'}
+						onClick={handleLoginStatus}>
+						{isLoggedIn ? 'Logout' : 'Login'}
+					</button>
 				</div>
+
+				{/* {isLoggedIn ? (
+						<button
+							type='button'
+							className='btn btn-danger'
+							onClick={() => {
+								Cookies.set('isLoggedIn', false);
+							}}>
+							Logout
+						</button>
+					) : (
+						<button
+							type='button'
+							className='btn btn-warning'
+							onClick={() => {
+								Cookies.set('isLoggedIn', true);
+							}}>
+							Login
+						</button>
+					)} */}
 				{/* CONTAINER WRAPPER */}
 			</nav>
 		</header>

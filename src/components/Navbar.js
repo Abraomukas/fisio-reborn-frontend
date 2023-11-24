@@ -17,9 +17,14 @@ const languages = [
 function Navbar(props) {
 	const loggedInCookie = Cookies.get('isLoggedIn') || false;
 	const [isLoggedIn, setIsLoggedIn] = useState(loggedInCookie);
+	const [showButton, setShowButton] = useState(false);
 
 	const handleLoginStatus = () => {
 		setIsLoggedIn(!isLoggedIn);
+	};
+
+	const handleShowButton = () => {
+		setShowButton(!showButton);
 	};
 
 	const currentLngCode = Cookies.get('i18next') || 'es';
@@ -113,12 +118,20 @@ function Navbar(props) {
 						</ul>
 					</div>
 
-					<button
-						type='button'
-						className={isLoggedIn ? 'btn btn-danger' : 'btn btn-warning'}
-						onClick={handleLoginStatus}>
-						{isLoggedIn ? 'Logout' : 'Login'}
+					<button type='button' className='btn' onClick={handleShowButton}>
+						Toggle
 					</button>
+
+					{showButton ? (
+						<button
+							type='button'
+							className={isLoggedIn ? 'btn btn-danger' : 'btn btn-warning'}
+							onClick={handleLoginStatus}>
+							{isLoggedIn ? 'Logout' : 'Login'}
+						</button>
+					) : (
+						<div></div>
+					)}
 				</div>
 
 				{/* {isLoggedIn ? (

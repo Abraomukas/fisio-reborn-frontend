@@ -40,6 +40,7 @@ function Testimonials() {
 						<img
 							src='https://mdbcdn.b-cdn.net/img/new/slides/041.webp'
 							className='d-block w-100'
+							height='500'
 							alt='Wild Landscape'
 						/>
 					</div>
@@ -47,6 +48,7 @@ function Testimonials() {
 						<img
 							src='https://mdbcdn.b-cdn.net/img/new/slides/042.webp'
 							className='d-block w-100'
+							height='500'
 							alt='Camera'
 						/>
 					</div>
@@ -54,6 +56,7 @@ function Testimonials() {
 						<img
 							src='https://mdbcdn.b-cdn.net/img/new/slides/043.webp'
 							className='d-block w-100'
+							height='500'
 							alt='Exotic Fruits'
 						/>
 					</div>

@@ -24,10 +24,9 @@ function Navbar(props) {
 	const currentLngCode = Cookies.get('i18next') || 'es';
 
 	return (
-		<nav
-			style={{ display: 'flex', justifyContent: 'space-between' }}
-			className='navbar navbar-expand-lg navbar-dark bg-dark'>
-			<div style={{ flex: '1' }} className='navbar-left'>
+		<nav className='navbar navbar-expand-lg navbar-dark bg-dark h-100 d-flex justify-content-between align-items-center'>
+			<div className='navbar-left'>
+				{/* LINKS */}
 				<button
 					className='navbar-brand navbar-toggler'
 					type='button'
@@ -38,9 +37,7 @@ function Navbar(props) {
 					aria-label='Toggle navigation'>
 					<i className='fas fa-bars'></i>
 				</button>
-				<div
-					className='navbar-brand collapse navbar-collapse'
-					id='navbarSupportedContent'>
+				<div className='collapse navbar-collapse' id='navbarSupportedContent'>
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
 						<li className='nav-item'>
 							<a className='nav-link' href='#'>
@@ -62,18 +59,20 @@ function Navbar(props) {
 			</div>
 			<div className='navbar-middle'>
 				{/* BRAND */}
-				<a className='navbar-brand mt-2 mt-lg-0' href='/'>
-					<img
-						src='./images/navbar-logo.png'
-						height='70'
-						alt='FisioReborn Logo'
-						loading='lazy'
-					/>
-				</a>
+				<div className='navbar-middle d-flex align-items-center mx-auto'>
+					<a href='/'>
+						<img
+							src='./images/navbar-logo.png'
+							height='80'
+							alt='FisioReborn Logo'
+							loading='lazy'
+						/>
+					</a>
+				</div>
 			</div>
-			<div style={{ flex: '1' }} className='navbar-right'>
+			<div className='navbar-right'>
 				{/* LANGUAGES */}
-				<div className='navbar-brand dropdown mx-3'>
+				<div className='dropdown mx-3'>
 					<a
 						className='text-reset me-3 dropdown-toggle hidden-arrow'
 						href='#'

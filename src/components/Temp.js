@@ -15,9 +15,43 @@ function Temp(props) {
 	};
 
 	return (
-		<nav className='d-flex w-100 justify-content-between align-items-center'>
-			<div style={{ background: 'blue', flex: 1, minHeight: 100 }}>
-				<button></button>
+		<nav className='d-flex justify-content-end align-items-center navbar navbar-expand-lg navbar-dark bg-dark'>
+			<div style={{ flex: 1, minHeight: 100 }}>
+				{/* TOGGLE BUTTON */}
+				<button
+					className='navbar-toggler'
+					type='button'
+					data-mdb-toggle='collapse'
+					data-mdb-target='#navbarSupportedContent'
+					aria-controls='navbarSupportedContent'
+					aria-expanded='false'
+					aria-label='Toggle navigation'>
+					<i className='fas fa-bars'></i>
+				</button>
+
+				{/* COLLAPSIBLE WRAPPER */}
+				<div
+					className='collapse navbar-collapse align-items-center'
+					id='navbarSupportedContent'>
+					{/* LEFT LINKS */}
+					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
+						<li className='nav-item'>
+							<a className='nav-link' href='#'>
+								Dashboard
+							</a>
+						</li>
+						<li className='nav-item'>
+							<a className='nav-link' href='#'>
+								Team
+							</a>
+						</li>
+						<li className='nav-item'>
+							<a className='nav-link' href='#'>
+								Projects
+							</a>
+						</li>
+					</ul>
+				</div>
 			</div>
 			<div
 				className='d-flex justify-content-center align-items-center navbar navbar-expand-lg navbar-dark bg-dark'

@@ -6,6 +6,8 @@ const languages = [
 	{ name: 'Español', country_code: 'es' },
 ];
 
+const sections = ['Dashboard', 'Team', 'Projects'];
+
 function Temp(props) {
 	const currentLngCode = Cookies.get('i18next') || 'es';
 	const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,8 +17,10 @@ function Temp(props) {
 	};
 
 	return (
-		<nav className='d-flex justify-content-end align-items-center navbar navbar-expand-lg navbar-dark bg-dark'>
-			<div style={{ flex: 1, minHeight: 100 }}>
+		<nav className='d-flex navbar navbar-expand-lg navbar-dark bg-dark'>
+			<div
+				className='d-flex justify-content-end align-items-center navbar navbar-expand-lg navbar-dark bg-dark'
+				style={{ flex: 1, minHeight: 100 }}>
 				{/* TOGGLE BUTTON */}
 				<button
 					className='navbar-toggler'
@@ -35,21 +39,15 @@ function Temp(props) {
 					id='navbarSupportedContent'>
 					{/* LEFT LINKS */}
 					<ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-						<li className='nav-item'>
-							<a className='nav-link' href='#'>
-								Dashboard
-							</a>
-						</li>
-						<li className='nav-item'>
-							<a className='nav-link' href='#'>
-								Team
-							</a>
-						</li>
-						<li className='nav-item'>
-							<a className='nav-link' href='#'>
-								Projects
-							</a>
-						</li>
+						{sections.map((section, index) => {
+							return (
+								<li key={index} className='nav-item'>
+									<a className='nav-link' href='#'>
+										{section}
+									</a>
+								</li>
+							);
+						})}
 					</ul>
 				</div>
 			</div>

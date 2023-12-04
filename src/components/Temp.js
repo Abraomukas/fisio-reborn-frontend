@@ -108,18 +108,20 @@ function Temp(props) {
 
 				{isLoggedIn ? (
 					<div className='d-flex mx-3'>
-						<button
-							type='button'
-							className={isLoggedIn ? 'btn btn-danger' : 'btn btn-warning'}
-							onClick={handleLoginStatus}>
-							{isLoggedIn ? 'Logout' : 'Login'}
-						</button>
-						<button
-							type='button'
-							className={isLoggedIn ? 'btn btn-danger' : 'btn btn-warning'}
-							onClick={handleLoginStatus}>
-							{isLoggedIn ? 'Logout' : 'Login'}
-						</button>
+						<div>
+							<button
+								type='button'
+								className='btn btn-primary'
+								onClick={handleLoginStatus}>
+								{'client_name'}
+							</button>
+							<button
+								type='button'
+								className={isLoggedIn ? 'btn btn-danger' : 'btn btn-warning'}
+								onClick={handleLoginStatus}>
+								{isLoggedIn ? 'Logout' : 'Login'}
+							</button>
+						</div>
 					</div>
 				) : (
 					<div className='d-flex mx-3'>
